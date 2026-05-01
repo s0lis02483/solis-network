@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { cn } from "@/lib/utils";
 
@@ -35,10 +36,8 @@ export function Navbar() {
             <nav className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2 group">
-                    <div className="size-8 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center shadow-md group-hover:shadow-yellow-400/40 transition-shadow duration-300">
-                        <span className="text-neutral-900 font-bold text-sm">S</span>
-                    </div>
-                    <span className="font-bold text-lg tracking-tight text-neutral-900 dark:text-white">
+                    <Image src="/logo.svg" alt="Solis Network logo" width={36} height={36} className="group-hover:scale-110 transition-transform duration-300" />
+                    <span className="font-bold text-lg tracking-tight text-white">
                         Solis<span className="text-yellow-400">.</span>
                     </span>
                 </a>

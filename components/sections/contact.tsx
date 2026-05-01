@@ -34,9 +34,9 @@ export function ContactSection() {
 
                         <ul className="flex flex-col gap-5">
                             {[
-                                { icon: Mail, label: "hello@solis.network" },
-                                { icon: Phone, label: "+1 (555) 012-3456" },
-                                { icon: MapPin, label: "New York · London · Tokyo" },
+                                { icon: Mail, label: "info@solis-network.com" },
+                                { icon: Phone, label: "+386 69 976 180" },
+                                { icon: MapPin, label: "Ljubljana, Slovenia" },
                             ].map(({ icon: Icon, label }) => (
                                 <li key={label} className="flex items-center gap-4">
                                     <div className="size-10 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center shrink-0">
