@@ -59,9 +59,11 @@ export function Navbar() {
 
                 {/* CTA */}
                 <div className="hidden md:flex items-center gap-3">
-                    <HoverBorderGradient as="a" href="#contact" className="px-5 py-2 text-sm">
-                        Get in touch
-                    </HoverBorderGradient>
+                    <a href="#contact">
+                        <HoverBorderGradient className="px-5 py-2 text-sm">
+                            Get in touch
+                        </HoverBorderGradient>
+                    </a>
                 </div>
 
                 {/* Mobile toggle */}
