@@ -76,12 +76,12 @@ export function BackgroundPaths({
                     className="max-w-4xl mx-auto flex flex-col items-center"
                 >
                     {/* Vapour text hero title — two stacked lines */}
-                    <div className="w-full" style={{ height: "280px" }}>
+                    <div className="w-full" style={{ height: "190px" }}>
                         <VaporizeTextCycle
                             texts={["Solis"]}
                             font={{
-                                fontFamily: "Inter, sans-serif",
-                                fontSize: "250px",
+                                fontFamily: "Roboto, sans-serif",
+                                fontSize: "160px",
                                 fontWeight: 700,
                             }}
                             color="rgb(255, 255, 255)"
@@ -97,12 +97,12 @@ export function BackgroundPaths({
                             tag={Tag.H1}
                         />
                     </div>
-                    <div className="w-full mb-8" style={{ height: "280px" }}>
+                    <div className="w-full mb-8" style={{ height: "190px" }}>
                         <VaporizeTextCycle
                             texts={["Network"]}
                             font={{
-                                fontFamily: "Inter, sans-serif",
-                                fontSize: "250px",
+                                fontFamily: "Roboto, sans-serif",
+                                fontSize: "160px",
                                 fontWeight: 700,
                             }}
                             color="rgb(255, 255, 255)"
