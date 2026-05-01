@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import VaporizeTextCycle, { Tag } from "@/components/ui/vapour-text-effect";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -13,14 +14,13 @@ function FloatingPaths({ position }: { position: number }) {
         } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
             684 - i * 5 * position
         } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
-        color: `rgba(15,23,42,${0.1 + i * 0.03})`,
         width: 0.5 + i * 0.03,
     }));
 
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
-                className="w-full h-full text-slate-950 dark:text-white"
+                className="w-full h-full text-white/20"
                 viewBox="0 0 696 316"
                 fill="none"
             >
@@ -51,7 +51,7 @@ function FloatingPaths({ position }: { position: number }) {
 }
 
 export function BackgroundPaths({
-    title = "Background Paths",
+    title = "Solis Network",
     subtitle,
     ctaLabel = "Discover Excellence",
     onCtaClick,
@@ -61,8 +61,6 @@ export function BackgroundPaths({
     ctaLabel?: string;
     onCtaClick?: () => void;
 }) {
-    const words = title.split(" ");
-
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
             <div className="absolute inset-0">
@@ -74,42 +72,38 @@ export function BackgroundPaths({
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}
-                    className="max-w-4xl mx-auto"
+                    transition={{ duration: 1 }}
+                    className="max-w-4xl mx-auto flex flex-col items-center"
                 >
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
-                        {words.map((word, wordIndex) => (
-                            <span
-                                key={wordIndex}
-                                className="inline-block mr-4 last:mr-0"
-                            >
-                                {word.split("").map((letter, letterIndex) => (
-                                    <motion.span
-                                        key={`${wordIndex}-${letterIndex}`}
-                                        initial={{ y: 100, opacity: 0 }}
-                                        animate={{ y: 0, opacity: 1 }}
-                                        transition={{
-                                            delay:
-                                                wordIndex * 0.1 +
-                                                letterIndex * 0.03,
-                                            type: "spring",
-                                            stiffness: 150,
-                                            damping: 25,
-                                        }}
-                                        className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80"
-                                    >
-                                        {letter}
-                                    </motion.span>
-                                ))}
-                            </span>
-                        ))}
-                    </h1>
+                    {/* Vapour text hero title */}
+                    <div className="w-full h-28 sm:h-36 md:h-44 mb-6">
+                        <VaporizeTextCycle
+                            texts={[title]}
+                            font={{
+                                fontFamily:
+                                    "var(--font-geist-sans), Inter, sans-serif",
+                                fontSize: "80px",
+                                fontWeight: 700,
+                            }}
+                            color="rgb(255, 255, 255)"
+                            spread={5}
+                            density={6}
+                            animation={{
+                                vaporizeDuration: 3,
+                                fadeInDuration: 1.5,
+                                waitDuration: 2.5,
+                            }}
+                            direction="left-to-right"
+                            alignment="center"
+                            tag={Tag.H1}
+                        />
+                    </div>
 
                     {subtitle && (
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.8, duration: 0.8 }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
                             className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-10 max-w-2xl mx-auto"
                         >
                             {subtitle}
@@ -119,7 +113,7 @@ export function BackgroundPaths({
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1, duration: 0.6 }}
+                        transition={{ delay: 0.8, duration: 0.6 }}
                         className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10 dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <Button
