@@ -4,13 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
-const stats = [
-    { value: "120+", label: "Projects delivered" },
-    { value: "98%", label: "Client satisfaction" },
-    { value: "8yrs", label: "In the industry" },
-    { value: "3×", label: "Average ROI" },
-];
-
 const values = [
     "Transparent communication, every step of the way",
     "Results that outlast the engagement",
@@ -39,11 +32,6 @@ export function AboutSection() {
                                 className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-transparent" />
-                        </div>
-                        {/* Floating stat badge */}
-                        <div className="absolute -bottom-6 -right-6 bg-white dark:bg-neutral-800 rounded-2xl shadow-xl p-5 border border-neutral-200/80 dark:border-neutral-700/50">
-                            <p className="text-3xl font-bold text-yellow-400">120+</p>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Projects delivered</p>
                         </div>
                     </motion.div>
 
@@ -79,15 +67,6 @@ export function AboutSection() {
                             ))}
                         </ul>
 
-                        {/* Stats row */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                            {stats.map((stat) => (
-                                <div key={stat.label} className="text-center bg-white dark:bg-neutral-800 rounded-xl p-4 border border-neutral-200/80 dark:border-neutral-700/50">
-                                    <p className="text-2xl font-bold text-neutral-900 dark:text-white">{stat.value}</p>
-                                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">{stat.label}</p>
-                                </div>
-                            ))}
-                        </div>
                     </motion.div>
                 </div>
             </div>
