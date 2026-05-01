@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -59,12 +59,9 @@ export function Navbar() {
 
                 {/* CTA */}
                 <div className="hidden md:flex items-center gap-3">
-                    <Button
-                        variant="default"
-                        className="rounded-full px-5 bg-neutral-900 hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 text-white text-sm font-semibold transition-all duration-200"
-                    >
-                        <a href="#contact">Get in touch</a>
-                    </Button>
+                    <HoverBorderGradient as="a" href="#contact" className="px-5 py-2 text-sm">
+                        Get in touch
+                    </HoverBorderGradient>
                 </div>
 
                 {/* Mobile toggle */}

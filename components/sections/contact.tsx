@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function ContactSection() {
     return (
@@ -99,10 +99,11 @@ export function ContactSection() {
                                     className="bg-neutral-800 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-yellow-400 transition-colors resize-none"
                                 />
                             </div>
-                            <Button className="w-full rounded-xl py-6 text-base font-semibold bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-neutral-900 border-none transition-all duration-200">
-                                Send message
-                                <ArrowRight className="size-4 ml-2" />
-                            </Button>
+                            <div className="flex justify-center">
+                                <HoverBorderGradient containerClassName="w-full rounded-xl" className="w-full justify-center px-6 py-3 text-base rounded-xl">
+                                    Send message →
+                                </HoverBorderGradient>
+                            </div>
                         </form>
                     </motion.div>
                 </div>
