@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import VaporizeTextCycle, { Tag } from "@/components/ui/vapour-text-effect";
+import { ShimmerText } from "@/components/ui/shimmer-text";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -70,49 +70,34 @@ export function BackgroundPaths({
 
             <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    className="max-w-4xl mx-auto flex flex-col items-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-5xl mx-auto flex flex-col items-center gap-8"
                 >
-                    {/* Vapour text hero title */}
-                    <div className="w-full mb-8" style={{ height: "140px" }}>
-                        <VaporizeTextCycle
-                            texts={["Solis Network"]}
-                            font={{
-                                fontFamily: "Roboto, sans-serif",
-                                fontSize: "110px",
-                                fontWeight: 700,
-                            }}
-                            color="rgb(255, 255, 255)"
-                            spread={5}
-                            density={6}
-                            animation={{
-                                vaporizeDuration: 3,
-                                fadeInDuration: 1.5,
-                                waitDuration: 2.5,
-                            }}
-                            direction="left-to-right"
-                            alignment="center"
-                            tag={Tag.H1}
-                        />
-                    </div>
+                    <ShimmerText
+                        className="text-[80px] sm:text-[100px] md:text-[110px] font-black tracking-tight leading-none text-white"
+                        duration={2.5}
+                        delay={0.5}
+                    >
+                        {title}
+                    </ShimmerText>
 
                     {subtitle && (
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6, duration: 0.8 }}
-                            className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-10 max-w-2xl mx-auto"
+                            transition={{ delay: 0.4, duration: 0.7 }}
+                            className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto"
                         >
                             {subtitle}
                         </motion.p>
                     )}
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.6 }}
+                        transition={{ delay: 0.6, duration: 0.6 }}
                     >
                         <HoverBorderGradient
                             onClick={onCtaClick}
