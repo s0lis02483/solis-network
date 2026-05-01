@@ -1,7 +1,6 @@
 import {
     Globe,
     Megaphone,
-    Target,
     Bot,
     Cpu,
     Mic,
@@ -204,90 +203,6 @@ export const services: Service[] = [
             ],
             closingStatement:
                 "Marketing that feels like a cost is marketing that isn't working. We build systems that make your spend come back multiplied.",
-        },
-    },
-    {
-        slug: "meta-ads",
-        title: "Meta Ads",
-        icon: Target,
-        tagline: "Facebook & Instagram ads that actually convert.",
-        description:
-            "Precision-targeted Meta advertising campaigns that put your brand in front of the people most likely to buy — and keep them coming back.",
-        content: {
-            overview:
-                "Meta's advertising platform — spanning Facebook, Instagram, and the Audience Network — gives you access to over 3 billion people. But raw reach means nothing without the right strategy. Solis Network's Meta Ads specialists combine deep audience intelligence, scroll-stopping creative, and relentless optimisation to deliver campaigns that generate real, measurable revenue for your business.",
-            features: [
-                {
-                    icon: "🎯",
-                    title: "Precision Audience Targeting",
-                    description:
-                        "Laser-focused targeting using interest layers, lookalike audiences, and custom audiences built from your CRM and website data. We find your buyers — not just browsers.",
-                },
-                {
-                    icon: "🎨",
-                    title: "Scroll-Stopping Creative",
-                    description:
-                        "High-quality ad creative — static images, carousels, Reels-style videos, and Stories — crafted to stop the scroll and drive clicks. We test multiple creatives every cycle.",
-                },
-                {
-                    icon: "🔄",
-                    title: "Retargeting & Remarketing",
-                    description:
-                        "Re-engage visitors who showed interest but didn't convert. Our retargeting funnels bring warm audiences back with the right message at every stage.",
-                },
-                {
-                    icon: "🛍️",
-                    title: "E-Commerce & Catalogue Ads",
-                    description:
-                        "Dynamic product ads that automatically show the right products to the right people based on their browsing and purchase behaviour.",
-                },
-                {
-                    icon: "📉",
-                    title: "Budget Optimisation & Bidding",
-                    description:
-                        "We manage your budget like it's our own — allocating spend to top-performing ad sets, adjusting bids in real time, and cutting waste fast.",
-                },
-                {
-                    icon: "📊",
-                    title: "Full-Funnel Reporting",
-                    description:
-                        "Transparent reporting on ROAS, CPL, CPA, and revenue attribution. You always know exactly what your Meta spend is generating.",
-                },
-            ],
-            process: [
-                {
-                    number: "01",
-                    title: "Account Audit & Setup",
-                    description:
-                        "We audit your existing ad account (or build one from scratch), set up the Meta Pixel correctly, and configure conversion events so tracking is airtight from day one.",
-                },
-                {
-                    number: "02",
-                    title: "Audience Research & Strategy",
-                    description:
-                        "We map out your ideal customer profiles, build seed audiences, and design a full-funnel campaign structure — awareness, consideration, and conversion.",
-                },
-                {
-                    number: "03",
-                    title: "Creative Production",
-                    description:
-                        "We produce multiple ad variations — copy, images, and video — designed specifically for Meta's placements and tested to find top performers quickly.",
-                },
-                {
-                    number: "04",
-                    title: "Launch & Active Management",
-                    description:
-                        "Campaigns go live with daily monitoring. We check performance every day and make data-driven adjustments to keep CPAs low and ROAS high.",
-                },
-                {
-                    number: "05",
-                    title: "Scale & Growth",
-                    description:
-                        "Once we have winning combinations of audience + creative + offer, we scale budgets aggressively while protecting efficiency — growing your revenue without sacrificing margin.",
-                },
-            ],
-            closingStatement:
-                "Most businesses waste 60% of their Meta budget. We make sure every euro works for you.",
         },
     },
     {
