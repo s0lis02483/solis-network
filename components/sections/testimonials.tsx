@@ -42,12 +42,12 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="inline-block text-sm font-semibold text-orange-500 tracking-widest uppercase mb-3">
+                    <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
                         Testimonials
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight">
                         Clients who{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
                             vouch for us
                         </span>
                     </h2>
@@ -67,7 +67,7 @@ export function TestimonialsSection() {
                                 {Array.from({ length: t.stars }).map((_, s) => (
                                     <Star
                                         key={s}
-                                        className="size-4 fill-amber-400 text-amber-400"
+                                        className="size-4 fill-yellow-400 text-yellow-400"
                                     />
                                 ))}
                             </div>

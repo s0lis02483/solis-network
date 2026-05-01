@@ -38,11 +38,11 @@ export function AboutSection() {
                                 fill
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-transparent" />
                         </div>
                         {/* Floating stat badge */}
                         <div className="absolute -bottom-6 -right-6 bg-white dark:bg-neutral-800 rounded-2xl shadow-xl p-5 border border-neutral-200/80 dark:border-neutral-700/50">
-                            <p className="text-3xl font-bold text-orange-500">120+</p>
+                            <p className="text-3xl font-bold text-yellow-400">120+</p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Projects delivered</p>
                         </div>
                     </motion.div>
@@ -54,12 +54,12 @@ export function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
                     >
-                        <span className="inline-block text-sm font-semibold text-orange-500 tracking-widest uppercase mb-3">
+                        <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
                             About Us
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight mb-6">
                             A network agency built on{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
                                 trust
                             </span>
                         </h2>
@@ -73,7 +73,7 @@ export function AboutSection() {
                         <ul className="flex flex-col gap-3 mb-10">
                             {values.map((v) => (
                                 <li key={v} className="flex items-start gap-3">
-                                    <CheckCircle className="size-5 text-orange-500 shrink-0 mt-0.5" />
+                                    <CheckCircle className="size-5 text-yellow-400 shrink-0 mt-0.5" />
                                     <span className="text-neutral-700 dark:text-neutral-300 text-sm">{v}</span>
                                 </li>
                             ))}

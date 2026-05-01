@@ -3,11 +3,11 @@ export function Footer() {
         <footer className="bg-neutral-950 border-t border-neutral-800 py-10">
             <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
-                    <div className="size-7 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">S</span>
+                    <div className="size-7 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center">
+                        <span className="text-neutral-900 font-bold text-xs">S</span>
                     </div>
                     <span className="font-bold text-base tracking-tight text-white">
-                        Solis<span className="text-orange-500">.</span>
+                        Solis<span className="text-yellow-400">.</span>
                     </span>
                 </div>
                 <p className="text-xs text-neutral-500">

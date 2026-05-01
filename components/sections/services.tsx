@@ -63,12 +63,12 @@ export function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="inline-block text-sm font-semibold text-orange-500 tracking-widest uppercase mb-3">
+                    <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
                         What We Do
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight">
                         Services built for{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
                             results
                         </span>
                     </h2>
@@ -90,10 +90,10 @@ export function ServicesSection() {
                             <motion.div
                                 key={service.title}
                                 variants={cardVariants}
-                                className="group bg-white dark:bg-neutral-800/60 rounded-2xl p-7 border border-neutral-200/80 dark:border-neutral-700/50 hover:border-orange-400/60 dark:hover:border-orange-400/40 hover:shadow-xl hover:shadow-orange-500/5 transition-all duration-300"
+                                className="group bg-white dark:bg-neutral-800/60 rounded-2xl p-7 border border-neutral-200/80 dark:border-neutral-700/50 hover:border-yellow-400/60 dark:hover:border-yellow-400/40 hover:shadow-xl hover:shadow-yellow-500/5 transition-all duration-300"
                             >
-                                <div className="size-12 rounded-xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 flex items-center justify-center mb-5 group-hover:from-amber-200 group-hover:to-orange-200 dark:group-hover:from-amber-800/40 dark:group-hover:to-orange-800/40 transition-all duration-300">
-                                    <Icon className="size-6 text-orange-500" />
+                                <div className="size-12 rounded-xl bg-yellow-100 dark:bg-yellow-900/20 flex items-center justify-center mb-5 group-hover:bg-yellow-200 dark:group-hover:bg-yellow-800/30 transition-all duration-300">
+                                    <Icon className="size-6 text-yellow-500 dark:text-yellow-400" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
                                     {service.title}

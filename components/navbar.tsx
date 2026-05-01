@@ -35,11 +35,11 @@ export function Navbar() {
             <nav className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2 group">
-                    <div className="size-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-md group-hover:shadow-orange-400/40 transition-shadow duration-300">
-                        <span className="text-white font-bold text-sm">S</span>
+                    <div className="size-8 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center shadow-md group-hover:shadow-yellow-400/40 transition-shadow duration-300">
+                        <span className="text-neutral-900 font-bold text-sm">S</span>
                     </div>
                     <span className="font-bold text-lg tracking-tight text-neutral-900 dark:text-white">
-                        Solis<span className="text-orange-500">.</span>
+                        Solis<span className="text-yellow-400">.</span>
                     </span>
                 </a>
 

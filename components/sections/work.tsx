@@ -10,7 +10,7 @@ const projects = [
         description:
             "A full-stack shopping experience that boosted conversions by 340% in the first quarter.",
         image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
-        accent: "from-violet-500 to-purple-600",
+        accent: "from-yellow-400 to-yellow-500",
     },
     {
         title: "Nexara Finance App",
@@ -18,7 +18,7 @@ const projects = [
         description:
             "A clean, intuitive fintech dashboard serving 50k+ active users with real-time data.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-        accent: "from-sky-500 to-blue-600",
+        accent: "from-yellow-300 to-yellow-500",
     },
     {
         title: "Bloom Health Platform",
@@ -26,7 +26,7 @@ const projects = [
         description:
             "Organic traffic grew 5× in six months through technical SEO and content strategy.",
         image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        accent: "from-emerald-500 to-teal-600",
+        accent: "from-yellow-400 to-yellow-600",
     },
     {
         title: "Forte Music Brand",
@@ -34,7 +34,7 @@ const projects = [
         description:
             "Complete rebrand for an independent label that tripled streaming engagement.",
         image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80",
-        accent: "from-amber-500 to-orange-500",
+        accent: "from-yellow-300 to-yellow-500",
     },
 ];
 
@@ -50,12 +50,12 @@ export function WorkSection() {
                     className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 gap-4"
                 >
                     <div>
-                        <span className="inline-block text-sm font-semibold text-orange-500 tracking-widest uppercase mb-3">
+                        <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
                             Our Work
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight">
                             Projects we're{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
                                 proud of
                             </span>
                         </h2>
@@ -86,7 +86,7 @@ export function WorkSection() {
                             </div>
                             <div className="absolute bottom-0 left-0 right-0 p-6">
                                 <span
-                                    className={`inline-block text-xs font-semibold text-white bg-gradient-to-r ${project.accent} rounded-full px-3 py-1 mb-2`}
+                                    className={`inline-block text-xs font-semibold text-neutral-900 bg-gradient-to-r ${project.accent} rounded-full px-3 py-1 mb-2`}
                                 >
                                     {project.category}
                                 </span>
