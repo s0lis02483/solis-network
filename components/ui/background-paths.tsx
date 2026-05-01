@@ -76,12 +76,12 @@ export function BackgroundPaths({
                     className="max-w-4xl mx-auto flex flex-col items-center"
                 >
                     {/* Vapour text hero title */}
-                    <div className="w-full mb-8" style={{ height: "190px" }}>
+                    <div className="w-full mb-8" style={{ height: "140px" }}>
                         <VaporizeTextCycle
                             texts={["Solis Network"]}
                             font={{
                                 fontFamily: "Roboto, sans-serif",
-                                fontSize: "160px",
+                                fontSize: "110px",
                                 fontWeight: 700,
                             }}
                             color="rgb(255, 255, 255)"
