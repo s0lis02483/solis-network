@@ -75,14 +75,13 @@ export function BackgroundPaths({
                     transition={{ duration: 1 }}
                     className="max-w-4xl mx-auto flex flex-col items-center"
                 >
-                    {/* Vapour text hero title */}
-                    <div className="w-full mb-6" style={{ height: "500px" }}>
+                    {/* Vapour text hero title — two stacked lines */}
+                    <div className="w-full" style={{ height: "280px" }}>
                         <VaporizeTextCycle
-                            texts={[title]}
+                            texts={["Solis"]}
                             font={{
-                                fontFamily:
-                                    "var(--font-geist-sans), Inter, sans-serif",
-                                fontSize: "500px",
+                                fontFamily: "Inter, sans-serif",
+                                fontSize: "250px",
                                 fontWeight: 700,
                             }}
                             color="rgb(255, 255, 255)"
@@ -94,6 +93,27 @@ export function BackgroundPaths({
                                 waitDuration: 2.5,
                             }}
                             direction="left-to-right"
+                            alignment="center"
+                            tag={Tag.H1}
+                        />
+                    </div>
+                    <div className="w-full mb-8" style={{ height: "280px" }}>
+                        <VaporizeTextCycle
+                            texts={["Network"]}
+                            font={{
+                                fontFamily: "Inter, sans-serif",
+                                fontSize: "250px",
+                                fontWeight: 700,
+                            }}
+                            color="rgb(255, 255, 255)"
+                            spread={5}
+                            density={6}
+                            animation={{
+                                vaporizeDuration: 3,
+                                fadeInDuration: 1.5,
+                                waitDuration: 2.5,
+                            }}
+                            direction="right-to-left"
                             alignment="center"
                             tag={Tag.H1}
                         />
