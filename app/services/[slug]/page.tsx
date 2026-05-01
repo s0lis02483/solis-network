@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { getService, services } from "@/lib/services-data";
@@ -58,39 +58,109 @@ export default async function ServicePage({
           <div className="h-px bg-neutral-800" />
         </div>
 
-        {/* Placeholder content */}
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
+        {/* Overview */}
+        <div className="container mx-auto px-4 md:px-6 mb-20">
+          <div className="max-w-3xl">
+            <span className="inline-block text-xs font-semibold text-yellow-400 tracking-widest uppercase mb-4">
+              Overview
+            </span>
+            <p className="text-lg text-neutral-300 leading-relaxed">
+              {service.content.overview}
+            </p>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div className="container mx-auto px-4 md:px-6 mb-20">
+          <span className="inline-block text-xs font-semibold text-yellow-400 tracking-widest uppercase mb-8">
+            What&apos;s included
+          </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {service.content.features.map((feature) => (
               <div
-                key={i}
-                className="bg-neutral-900 rounded-2xl border border-neutral-800 p-8 flex flex-col gap-4"
+                key={feature.title}
+                className="bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-yellow-400/30 p-7 flex flex-col gap-4 transition-colors duration-300"
               >
-                <div className="h-5 w-3/4 bg-neutral-800 rounded-full animate-pulse" />
-                <div className="h-4 w-full bg-neutral-800/60 rounded-full animate-pulse" />
-                <div className="h-4 w-5/6 bg-neutral-800/60 rounded-full animate-pulse" />
-                <div className="h-4 w-4/6 bg-neutral-800/60 rounded-full animate-pulse" />
+                <span className="text-3xl">{feature.icon}</span>
+                <h3 className="text-base font-semibold text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="mt-16 bg-neutral-900 border border-yellow-400/20 rounded-2xl p-10 text-center">
-            <div className="size-12 rounded-full bg-yellow-400/10 flex items-center justify-center mx-auto mb-4">
-              <Icon className="size-6 text-yellow-400" />
+        {/* Divider */}
+        <div className="container mx-auto px-4 md:px-6 mb-20">
+          <div className="h-px bg-neutral-800" />
+        </div>
+
+        {/* Process */}
+        <div className="container mx-auto px-4 md:px-6 mb-20">
+          <span className="inline-block text-xs font-semibold text-yellow-400 tracking-widest uppercase mb-4">
+            How it works
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+            Our process
+          </h2>
+          <div className="flex flex-col gap-0">
+            {service.content.process.map((step, index) => (
+              <div
+                key={step.number}
+                className="relative flex gap-6 md:gap-10 pb-10 last:pb-0"
+              >
+                {/* Connector line */}
+                {index < service.content.process.length - 1 && (
+                  <div className="absolute left-[19px] top-10 bottom-0 w-px bg-neutral-800" />
+                )}
+                {/* Step number circle */}
+                <div className="shrink-0 size-10 rounded-full bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center z-10">
+                  <span className="text-xs font-bold text-yellow-400">
+                    {step.number}
+                  </span>
+                </div>
+                {/* Content */}
+                <div className="pt-1.5 pb-2">
+                  <h3 className="text-base font-semibold text-white mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed max-w-2xl">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Closing CTA */}
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="bg-neutral-900 border border-yellow-400/20 rounded-2xl p-10 md:p-14 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+            <div className="flex-1">
+              <div className="size-12 rounded-full bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center mb-6">
+                <Icon className="size-6 text-yellow-400" />
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
+                {service.content.closingStatement}
+              </p>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">
-              Content coming soon
-            </h2>
-            <p className="text-neutral-400 max-w-md mx-auto text-sm">
-              Detailed information about {service.title} will be added shortly.
-              In the meantime, reach out and we'll walk you through everything.
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-colors duration-200"
-            >
-              Get in touch
-            </Link>
+            <div className="shrink-0 flex flex-col gap-3">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-colors duration-200"
+              >
+                Get in touch <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                href="/#services"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-neutral-700 text-neutral-300 font-semibold text-sm hover:border-neutral-500 hover:text-white transition-colors duration-200"
+              >
+                View all services
+              </Link>
+            </div>
           </div>
         </div>
       </main>
