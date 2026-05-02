@@ -74,12 +74,12 @@ const cases = [
         tag: "Team Systems",
         company: "Construction Company",
         industry: "Operations · Croatia",
-        problem: "Project managers were tracking jobs across spreadsheets, WhatsApp groups, and email threads. Nothing was in one place — deadlines slipped, costs were hard to track, and reporting took hours each week.",
-        solution: "We built a custom internal platform with project tracking, team task management, budget dashboards, and automated weekly reports — all connected to their existing tools.",
+        problem: "Project information was spread across spreadsheets, messaging apps, and email threads. This made it difficult to keep track of deadlines, monitor costs accurately, and prepare consistent reports without spending significant time each week.",
+        solution: "We developed a centralized internal platform for project tracking, task management, and budget visibility. It integrates with their existing tools and simplifies weekly reporting, giving the team a clearer overview of ongoing work.",
         results: [
-            { metric: "12hrs", label: "saved on reporting weekly" },
-            { metric: "100%", label: "of projects on time since launch" },
-            { metric: "1 place", label: "for every project, task and update" },
+            { metric: "6–8hrs", label: "saved on reporting each week" },
+            { metric: "Improved", label: "consistency in project timelines and delivery" },
+            { metric: "1 system", label: "for projects, tasks, and updates" },
         ],
     },
 ];
