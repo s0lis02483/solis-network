@@ -77,12 +77,16 @@ export default async function ServicePage({
             What&apos;s included
           </span>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {service.content.features.map((feature) => (
+            {service.content.features.map((feature) => {
+              const FeatureIcon = feature.icon;
+              return (
               <div
                 key={feature.title}
                 className="bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-yellow-400/30 p-7 flex flex-col gap-4 transition-colors duration-300"
               >
-                <span className="text-3xl">{feature.icon}</span>
+                <div className="size-10 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center">
+                  <FeatureIcon className="size-5 text-yellow-400" />
+                </div>
                 <h3 className="text-base font-semibold text-white">
                   {feature.title}
                 </h3>
@@ -90,7 +94,7 @@ export default async function ServicePage({
                   {feature.description}
                 </p>
               </div>
-            ))}
+            );})}
           </div>
         </div>
 

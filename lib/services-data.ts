@@ -5,11 +5,33 @@ import {
     Cpu,
     Mic,
     Layers,
+    Zap,
+    ShoppingCart,
+    Target,
+    Link,
+    Smartphone,
+    Gauge,
+    BarChart3,
+    Mail,
+    FileText,
+    DollarSign,
+    TrendingUp,
+    MessageCircle,
+    Brain,
+    Settings,
+    Phone,
+    PhoneOutgoing,
+    Calendar,
+    FolderOpen,
+    Users,
+    RefreshCw,
+    Lock,
+    Puzzle,
     type LucideIcon,
 } from "lucide-react";
 
 export type ServiceFeature = {
-    icon: string;
+    icon: LucideIcon;
     title: string;
     description: string;
 };
@@ -49,37 +71,37 @@ export const services: Service[] = [
                 "At Solis Network, web development is more than writing code — it's building a digital foundation for your business. We combine modern frameworks, clean architecture, and conversion-focused design to deliver web experiences that grow with you. Whether you need a sleek landing page or a complex SaaS platform, we engineer it to the highest standard.",
             features: [
                 {
-                    icon: "⚡",
+                    icon: Zap,
                     title: "Custom Web Applications",
                     description:
                         "Fully custom-built web apps tailored to your exact business logic. From internal tools to customer-facing platforms, we build scalable solutions using Next.js, React, and TypeScript.",
                 },
                 {
-                    icon: "🛒",
+                    icon: ShoppingCart,
                     title: "E-Commerce Development",
                     description:
                         "Revenue-driving online stores with seamless checkout flows, product management, and payment integrations. Optimised for speed, SEO, and conversion.",
                 },
                 {
-                    icon: "🎯",
+                    icon: Target,
                     title: "Landing Pages & Marketing Sites",
                     description:
                         "High-converting landing pages and corporate websites built with performance in mind. Every pixel is intentional, every section guides the visitor toward action.",
                 },
                 {
-                    icon: "🔗",
+                    icon: Link,
                     title: "API & Third-Party Integration",
                     description:
                         "Connect your website with CRMs, payment gateways, analytics tools, and any external service through robust, well-documented API integrations.",
                 },
                 {
-                    icon: "📱",
+                    icon: Smartphone,
                     title: "Responsive & Mobile-First Design",
                     description:
                         "Every project we deliver works flawlessly across all screen sizes. We design mobile-first and test on real devices before every launch.",
                 },
                 {
-                    icon: "🚀",
+                    icon: Gauge,
                     title: "Performance Optimisation",
                     description:
                         "Core Web Vitals scores that impress. We optimise images, code-split bundles, and implement caching strategies so your site loads in under a second.",
@@ -133,37 +155,37 @@ export const services: Service[] = [
                 "Great marketing isn't about being everywhere — it's about being in the right place with the right message at the right time. Solis Network builds full-funnel digital marketing strategies that attract, engage, and convert your ideal customers. From organic content to paid campaigns, we handle every channel with precision and creativity.",
             features: [
                 {
-                    icon: "📊",
+                    icon: BarChart3,
                     title: "Social Media Management",
                     description:
                         "Consistent, on-brand social media presence across Instagram, LinkedIn, TikTok, and beyond. We handle content creation, scheduling, community management, and growth.",
                 },
                 {
-                    icon: "✉️",
+                    icon: Mail,
                     title: "Email Marketing & Automation",
                     description:
                         "Nurture sequences, newsletters, and automated flows that keep your audience engaged and drive repeat purchases. Average open rates 35% above industry benchmarks.",
                 },
                 {
-                    icon: "📝",
+                    icon: FileText,
                     title: "Content Strategy & SEO",
                     description:
                         "Long-form content, blog posts, and keyword strategies that build organic visibility over time. Every piece of content is designed to rank, educate, and convert.",
                 },
                 {
-                    icon: "💰",
+                    icon: DollarSign,
                     title: "Paid Search (Google Ads)",
                     description:
                         "Intent-driven Google Ads campaigns that capture buyers at the moment they're ready to act. We manage budgets, bids, and copy for maximum ROAS.",
                 },
                 {
-                    icon: "📈",
+                    icon: TrendingUp,
                     title: "Analytics & Reporting",
                     description:
                         "Clear, jargon-free reporting dashboards that show exactly what's working. Monthly strategy reviews keep campaigns aligned with your business goals.",
                 },
                 {
-                    icon: "🎯",
+                    icon: Target,
                     title: "Conversion Rate Optimisation",
                     description:
                         "A/B testing, landing page optimisation, and funnel analysis that squeeze more value from your existing traffic without increasing ad spend.",
@@ -217,37 +239,37 @@ export const services: Service[] = [
                 "The era of rigid, scripted chatbots is over. Solis Network builds next-generation AI chatbots powered by large language models that understand context, answer naturally, and integrate deeply with your business systems. Whether on your website, WhatsApp, or Instagram DMs, our chatbots deliver human-quality conversations at machine scale — 24 hours a day, 7 days a week.",
             features: [
                 {
-                    icon: "🤖",
+                    icon: Bot,
                     title: "Customer Support Automation",
                     description:
                         "Resolve 70%+ of customer queries automatically — without a human touch. Our bots understand intent, access your knowledge base, and escalate to a human only when necessary.",
                 },
                 {
-                    icon: "🎯",
+                    icon: Target,
                     title: "Lead Qualification Bots",
                     description:
                         "Engage website visitors the moment they arrive, ask the right qualifying questions, and hand off hot leads to your sales team with full context. Never lose a lead to slow response times again.",
                 },
                 {
-                    icon: "💬",
+                    icon: MessageCircle,
                     title: "WhatsApp & Social Bots",
                     description:
                         "Deploy intelligent bots on WhatsApp Business, Instagram DMs, and Facebook Messenger — where your customers already spend their time.",
                 },
                 {
-                    icon: "🔗",
+                    icon: Link,
                     title: "CRM & Tool Integration",
                     description:
                         "Our chatbots connect directly with your CRM, helpdesk, calendar, and e-commerce platform. They can look up orders, book appointments, and update records automatically.",
                 },
                 {
-                    icon: "🧠",
+                    icon: Brain,
                     title: "Custom AI Personality & Knowledge",
                     description:
                         "Trained on your products, services, tone of voice, and policies. Your bot sounds like your brand — not a generic AI assistant.",
                 },
                 {
-                    icon: "📊",
+                    icon: BarChart3,
                     title: "Analytics & Conversation Insights",
                     description:
                         "Understand what your customers are asking, where they drop off, and what gaps exist in your content — all from the chatbot conversation dashboard.",
@@ -301,37 +323,37 @@ export const services: Service[] = [
                 "Repetitive, manual processes are silently draining your team's time and your company's potential. Solis Network designs and builds intelligent automation workflows that handle the routine so your people can focus on the strategic. From document processing to multi-step business workflows, we use the latest AI tools to build automations that run 24/7 without supervision.",
             features: [
                 {
-                    icon: "⚙️",
+                    icon: Settings,
                     title: "Business Process Automation",
                     description:
                         "Map, design, and automate complex multi-step business processes — from invoice processing to employee onboarding — with zero manual intervention.",
                 },
                 {
-                    icon: "🔗",
+                    icon: Link,
                     title: "App & Platform Integration",
                     description:
                         "Connect your existing tools — CRM, ERP, email, Slack, spreadsheets — into seamless automated workflows. No more copy-pasting between systems.",
                 },
                 {
-                    icon: "📄",
+                    icon: FileText,
                     title: "AI Document Processing",
                     description:
                         "Automatically extract, classify, and process data from invoices, contracts, forms, and emails using AI — with accuracy that matches or exceeds manual review.",
                 },
                 {
-                    icon: "📧",
+                    icon: Mail,
                     title: "Intelligent Email & Communication",
                     description:
                         "AI that reads, categorises, and responds to emails — routing support tickets, drafting replies, and escalating urgent messages to the right person.",
                 },
                 {
-                    icon: "📊",
+                    icon: BarChart3,
                     title: "Data Pipeline Automation",
                     description:
                         "Automated data collection, transformation, and reporting pipelines that keep your dashboards always up to date without anyone lifting a finger.",
                 },
                 {
-                    icon: "🧩",
+                    icon: Puzzle,
                     title: "Custom AI Workflow Builder",
                     description:
                         "Bespoke automation solutions built around your exact business logic — not generic off-the-shelf tools that almost fit.",
@@ -385,37 +407,37 @@ export const services: Service[] = [
                 "Voice AI is no longer science fiction — it's a competitive advantage. Solis Network builds custom voice assistants that can handle inbound calls, make outbound follow-ups, walk customers through processes, and collect information — all using natural, lifelike AI voice. Whether you want to automate your phone support or build a fully branded voice experience, we deliver it.",
             features: [
                 {
-                    icon: "📞",
+                    icon: Phone,
                     title: "Inbound Call Automation",
                     description:
                         "An AI voice assistant that answers your phone 24/7, understands caller intent, answers questions, and routes calls or books appointments — without a receptionist.",
                 },
                 {
-                    icon: "🔔",
+                    icon: PhoneOutgoing,
                     title: "Outbound Call Campaigns",
                     description:
                         "Automated outbound calls for follow-ups, appointment reminders, satisfaction surveys, and re-engagement — at scale and without a call centre.",
                 },
                 {
-                    icon: "📅",
+                    icon: Calendar,
                     title: "Appointment Booking by Voice",
                     description:
                         "Callers can book, reschedule, or cancel appointments through a natural voice conversation that connects directly to your calendar system.",
                 },
                 {
-                    icon: "🌍",
+                    icon: Globe,
                     title: "Multilingual Voice Support",
                     description:
                         "Serve customers in their native language. Our voice assistants support multiple languages and automatically detect which one to use.",
                 },
                 {
-                    icon: "🧠",
+                    icon: Brain,
                     title: "Natural Language Understanding",
                     description:
                         "Our assistants understand accents, interruptions, and complex requests — not just rigid command phrases. They hold real, fluid conversations.",
                 },
                 {
-                    icon: "📊",
+                    icon: BarChart3,
                     title: "Call Analytics & Transcription",
                     description:
                         "Every call is recorded, transcribed, and analysed. Get insights into common questions, sentiment, and resolution rates from your voice data.",
@@ -469,37 +491,37 @@ export const services: Service[] = [
                 "Generic software forces your team to adapt to the tool. We build tools that adapt to your team. Solis Network develops custom internal systems — from project management platforms to CRM dashboards and operational workflows — that fit your exact processes, integrate with your existing stack, and scale as your organisation grows. If you've ever thought 'I wish our system did X', we build that.",
             features: [
                 {
-                    icon: "🗂️",
+                    icon: FolderOpen,
                     title: "Custom Project Management Systems",
                     description:
                         "Purpose-built project and task management tools that match your team's actual workflow — not a watered-down version of what a generic tool offers.",
                 },
                 {
-                    icon: "📊",
+                    icon: BarChart3,
                     title: "Internal Dashboards & Reporting",
                     description:
                         "Real-time dashboards that pull data from all your tools into one place. Always know where your projects, KPIs, and team performance stand.",
                 },
                 {
-                    icon: "👥",
+                    icon: Users,
                     title: "CRM & Client Management Tools",
                     description:
                         "Custom client management systems that track relationships, communications, and deals — built around your sales process, not a generic template.",
                 },
                 {
-                    icon: "🔄",
+                    icon: RefreshCw,
                     title: "Workflow Automation & Approvals",
                     description:
                         "Automated approval chains, notifications, and handoffs that keep work moving without status-update meetings or manual follow-ups.",
                 },
                 {
-                    icon: "🔐",
+                    icon: Lock,
                     title: "Role-Based Access & Security",
                     description:
                         "Granular permissions so every team member sees exactly what they need — no more, no less. Enterprise-grade security built in from the start.",
                 },
                 {
-                    icon: "🔗",
+                    icon: Link,
                     title: "Full-Stack Integration",
                     description:
                         "Your new system connects with Slack, email, accounting software, and any other tool your team uses — creating a single source of truth for your organisation.",
