@@ -22,12 +22,12 @@ const cases = [
         tag: "AI Automation",
         company: "Marketing Agency",
         industry: "Agency · Croatia",
-        problem: "Their team was spending 25+ hours a week manually pulling reports, sending client updates, and managing repetitive admin tasks.",
-        solution: "We built an end-to-end automation system that collects data from all platforms, generates client reports automatically, and sends updates — without anyone touching it.",
+        problem: "The team was spending a significant amount of time each week pulling data from multiple platforms, preparing client reports, and handling repetitive administrative tasks. This reduced the time available for higher-value work like strategy and campaign optimization.",
+        solution: "We implemented an automation system that consolidates data from key marketing platforms, streamlines report generation, and assists with client updates. This reduced the need for manual work while keeping reporting consistent and timely.",
         results: [
-            { metric: "25hrs", label: "saved every week" },
-            { metric: "0", label: "manual reports needed" },
-            { metric: "€3k", label: "saved in monthly labour" },
+            { metric: "~15hrs", label: "saved per week" },
+            { metric: "70–80%", label: "reduction in manual reporting tasks" },
+            { metric: "~€1,200", label: "saved in monthly labour costs" },
         ],
     },
     {
