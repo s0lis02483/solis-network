@@ -152,9 +152,9 @@ export function CaseStudiesSection() {
                                         <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-8">Results</p>
                                         <div className="flex flex-col gap-6">
                                             {c.results.map((r) => (
-                                                <div key={r.label} className="flex items-center gap-5">
-                                                    <span className="text-4xl font-black text-yellow-400 shrink-0 w-24">{r.metric}</span>
-                                                    <span className="text-sm text-neutral-300 font-medium">{r.label}</span>
+                                                <div key={r.label} className="flex items-center gap-6">
+                                                    <span className="text-2xl font-black text-yellow-400 whitespace-nowrap shrink-0 min-w-[90px]">{r.metric}</span>
+                                                    <span className="text-sm text-neutral-300 font-medium leading-snug">{r.label}</span>
                                                 </div>
                                             ))}
                                         </div>
