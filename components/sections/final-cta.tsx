@@ -27,11 +27,13 @@ export function FinalCTASection() {
                 >
                     <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">{f.title}</h2>
                     <p className="text-lg text-neutral-400 mb-10">{f.sub}</p>
-                    <a href="#contact">
-                        <HoverBorderGradient yellow className="px-9 py-4 text-base font-black flex items-center gap-3">
-                            {f.btn} <ArrowRight className="size-5" />
-                        </HoverBorderGradient>
-                    </a>
+                    <div className="flex justify-center">
+                        <a href="#contact">
+                            <HoverBorderGradient yellow className="px-9 py-4 text-base font-black flex items-center gap-3">
+                                {f.btn} <ArrowRight className="size-5" />
+                            </HoverBorderGradient>
+                        </a>
+                    </div>
                     <p className="text-xs text-neutral-600 mt-5">{f.fine}</p>
                 </motion.div>
             </div>
