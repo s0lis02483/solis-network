@@ -35,12 +35,12 @@ const cases = [
         tag: "Web Development",
         company: "Local Service Business",
         industry: "Services · Austria",
-        problem: "Their old website was slow, not mobile-friendly, and generating almost no enquiries — despite spending on Google Ads.",
-        solution: "We rebuilt their site from scratch: fast, mobile-first, and conversion-focused. Every section was designed to move visitors toward booking a service.",
+        problem: "Their existing website was outdated, slow to load, and not optimized for mobile users. Despite investing in Google Ads, a large portion of visitors were leaving without making an enquiry.",
+        solution: "We redesigned and rebuilt the website with a focus on speed, mobile usability, and clear conversion paths. Key pages were simplified and structured to make it easier for visitors to understand the service and get in touch.",
         results: [
-            { metric: "220%", label: "increase in enquiries" },
-            { metric: "1.2s", label: "average load time" },
-            { metric: "4.8×", label: "improvement in ad ROAS" },
+            { metric: "+65%", label: "increase in enquiries" },
+            { metric: "~1.8s", label: "average load time" },
+            { metric: "2.1×", label: "improvement in ad ROAS" },
         ],
     },
     {
