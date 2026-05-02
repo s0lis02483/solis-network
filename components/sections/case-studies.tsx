@@ -9,12 +9,12 @@ const cases = [
         tag: "AI Chatbot",
         company: "E-Commerce Store",
         industry: "Retail · Slovenia",
-        problem: "The store was losing potential customers who visited outside of opening hours — no one available to answer questions or close sales.",
-        solution: "We deployed an AI chatbot on their website that answers product questions, handles objections, collects lead details, and guides visitors to checkout — around the clock.",
+        problem: "The store was missing opportunities from visitors who browsed outside business hours. With no immediate responses to product questions, many potential customers left before completing a purchase.",
+        solution: "We implemented an AI chatbot on their website to handle common product inquiries, provide basic recommendations, and capture contact details. The chatbot also helps guide visitors toward relevant products and the checkout process, even when the team is offline.",
         results: [
-            { metric: "40%", label: "more leads captured" },
-            { metric: "3×", label: "faster response time" },
-            { metric: "€12k", label: "extra revenue in month 1" },
+            { metric: "+18%", label: "increase in leads captured" },
+            { metric: "~2×", label: "faster average response time" },
+            { metric: "€3,500+", label: "additional revenue in the first month" },
         ],
     },
     {
