@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Cpu, Globe } from "lucide-react";
+import { Bot, Cpu, Globe, Mic, Megaphone, Layers } from "lucide-react";
 
 const cases = [
     {
@@ -41,6 +41,45 @@ const cases = [
             { metric: "220%", label: "increase in enquiries" },
             { metric: "1.2s", label: "average load time" },
             { metric: "4.8×", label: "improvement in ad ROAS" },
+        ],
+    },
+    {
+        icon: Mic,
+        tag: "Voice Assistant",
+        company: "Medical Clinic",
+        industry: "Healthcare · Slovenia",
+        problem: "The clinic was missing 30–40% of incoming calls during busy hours. Staff spent most of their day managing bookings over the phone instead of helping patients.",
+        solution: "We built a voice AI that answers every call instantly, books appointments directly into their calendar, sends confirmation messages, and handles rescheduling — without any human involvement.",
+        results: [
+            { metric: "0", label: "missed calls since launch" },
+            { metric: "6hrs", label: "of staff time freed daily" },
+            { metric: "3×", label: "more bookings per week" },
+        ],
+    },
+    {
+        icon: Megaphone,
+        tag: "Digital Marketing",
+        company: "D2C Fashion Brand",
+        industry: "E-Commerce · Germany",
+        problem: "The brand was running ads with no clear strategy — burning budget on broad audiences with poor ROAS and almost no repeat customers.",
+        solution: "We built a full-funnel marketing system: audience research, content strategy, email automation sequences, and paid search campaigns — all connected and optimised together.",
+        results: [
+            { metric: "3.7×", label: "average ROAS achieved" },
+            { metric: "55%", label: "increase in repeat purchases" },
+            { metric: "€28k", label: "extra monthly revenue" },
+        ],
+    },
+    {
+        icon: Layers,
+        tag: "Team Systems",
+        company: "Construction Company",
+        industry: "Operations · Croatia",
+        problem: "Project managers were tracking jobs across spreadsheets, WhatsApp groups, and email threads. Nothing was in one place — deadlines slipped, costs were hard to track, and reporting took hours each week.",
+        solution: "We built a custom internal platform with project tracking, team task management, budget dashboards, and automated weekly reports — all connected to their existing tools.",
+        results: [
+            { metric: "12hrs", label: "saved on reporting weekly" },
+            { metric: "100%", label: "of projects on time since launch" },
+            { metric: "1 place", label: "for every project, task and update" },
         ],
     },
 ];
