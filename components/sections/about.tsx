@@ -5,10 +5,10 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
 const values = [
-    "Transparent communication, every step of the way",
-    "Results that outlast the engagement",
-    "Senior talent on every project — no juniors unsupervised",
-    "Agile delivery with weekly progress checkpoints",
+    "Clear, transparent communication at every stage",
+    "Results designed to deliver long-term impact, not short-term wins",
+    "Senior-level experts leading every project from start to finish",
+    "Agile workflows with weekly check-ins to keep everything aligned and on track",
 ];
 
 export function AboutSection() {
@@ -24,14 +24,14 @@ export function AboutSection() {
                         transition={{ duration: 0.7 }}
                         className="relative"
                     >
-                        <div className="relative rounded-2xl overflow-hidden h-[480px]">
+                        <div className="relative rounded-2xl overflow-hidden h-[520px]">
                             <Image
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80"
-                                alt="Solis Network team collaborating"
+                                src="/about-photo.jpg"
+                                alt="Solis Network — operating at the forefront"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-center"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent" />
                         </div>
                     </motion.div>
 
@@ -48,14 +48,14 @@ export function AboutSection() {
                         <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight mb-6">
                             A network agency built on{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
-                                trust
+                                trust and results
                             </span>
                         </h2>
-                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-6">
-                            Solis Network is a full-service digital agency headquartered in the heart of innovation. We partner with startups, scale-ups, and established brands to craft digital strategies that actually work.
+                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-5">
+                            Solis Network is a full-service digital agency operating at the forefront of innovation. We collaborate with startups, scale-ups, and established brands to design and execute digital strategies that drive real, measurable growth — not just impressions.
                         </p>
                         <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
-                            Our team of strategists, designers, and engineers bring diverse expertise to every project — ensuring every decision is intentional, every pixel purposeful, and every campaign measurable.
+                            Our team of experienced strategists, designers, and engineers brings deep, cross-functional expertise to every project. Every decision is deliberate, every detail refined, and every solution built with performance in mind.
                         </p>
 
                         <ul className="flex flex-col gap-3 mb-10">
@@ -67,6 +67,9 @@ export function AboutSection() {
                             ))}
                         </ul>
 
+                        <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed italic border-l-2 border-yellow-400/50 pl-4">
+                            We don&apos;t just deliver projects — we build partnerships that move your business forward.
+                        </p>
                     </motion.div>
                 </div>
             </div>
