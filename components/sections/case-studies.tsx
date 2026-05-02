@@ -61,12 +61,12 @@ const cases = [
         tag: "Digital Marketing",
         company: "D2C Fashion Brand",
         industry: "E-Commerce · Germany",
-        problem: "The brand was running ads with no clear strategy — burning budget on broad audiences with poor ROAS and almost no repeat customers.",
-        solution: "We built a full-funnel marketing system: audience research, content strategy, email automation sequences, and paid search campaigns — all connected and optimised together.",
+        problem: "The brand was running paid ads without a clear structure or targeting strategy. As a result, a large portion of their budget was going toward broad audiences with inconsistent returns, and there was little focus on retaining existing customers.",
+        solution: "We developed a more structured marketing approach, including refined audience targeting, a consistent content strategy, and basic email automation for customer retention. Paid campaigns were reorganized and gradually optimized based on performance data.",
         results: [
-            { metric: "3.7×", label: "average ROAS achieved" },
-            { metric: "55%", label: "increase in repeat purchases" },
-            { metric: "€28k", label: "extra monthly revenue" },
+            { metric: "2.2–2.8×", label: "average ROAS achieved" },
+            { metric: "+25–35%", label: "increase in repeat purchases" },
+            { metric: "€8k–€12k", label: "additional monthly revenue" },
         ],
     },
     {
