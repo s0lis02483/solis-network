@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const faqs = [
     {
@@ -97,11 +98,10 @@ export function FAQSection() {
                         <p className="text-neutral-400 text-lg leading-relaxed mb-8">
                             Still not sure? Here are the most common questions businesses ask before working with us.
                         </p>
-                        <a
-                            href="#contact"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-colors duration-200"
-                        >
-                            Ask us directly →
+                        <a href="#contact">
+                            <HoverBorderGradient yellow className="px-6 py-3 text-sm">
+                                Ask us directly →
+                            </HoverBorderGradient>
                         </a>
                     </motion.div>
 

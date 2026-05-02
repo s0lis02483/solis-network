@@ -107,11 +107,10 @@ export function HeroConversion() {
                                 Book a Free Call
                             </HoverBorderGradient>
                         </a>
-                        <a
-                            href="#how-it-works"
-                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-neutral-700 text-neutral-300 text-sm font-medium hover:border-neutral-500 hover:text-white transition-colors duration-200"
-                        >
-                            See How It Works <ArrowRight className="size-4" />
+                        <a href="#how-it-works">
+                            <HoverBorderGradient className="px-6 py-3.5 text-sm flex items-center gap-2">
+                                See How It Works <ArrowRight className="size-4" />
+                            </HoverBorderGradient>
                         </a>
                     </motion.div>
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Clock } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function CTASection() {
     return (
@@ -31,12 +32,11 @@ export function CTASection() {
                         Limited spots available this month — don&apos;t miss yours.
                     </p>
 
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-yellow-400 text-neutral-900 font-black text-lg hover:bg-yellow-300 transition-colors duration-200 shadow-xl shadow-yellow-400/20"
-                    >
-                        <Calendar className="size-5" />
-                        Book Your Free Strategy Call
+                    <a href="#contact">
+                        <HoverBorderGradient yellow className="px-10 py-4 text-lg font-black flex items-center gap-3">
+                            <Calendar className="size-5" />
+                            Book Your Free Strategy Call
+                        </HoverBorderGradient>
                     </a>
 
                     <p className="text-xs text-neutral-600 mt-5">No commitment. No credit card. Just a conversation.</p>

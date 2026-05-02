@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function FinalCTASection() {
     return (
@@ -27,11 +28,10 @@ export function FinalCTASection() {
                     <p className="text-lg text-neutral-400 mb-10">
                         Your competitors are already using AI to work faster, respond quicker, and scale without extra headcount. The gap is growing every week.
                     </p>
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-yellow-400 text-neutral-900 font-black text-base hover:bg-yellow-300 transition-colors duration-200 shadow-lg shadow-yellow-400/20"
-                    >
-                        Start Today — It&apos;s Free <ArrowRight className="size-5" />
+                    <a href="#contact">
+                        <HoverBorderGradient yellow className="px-9 py-4 text-base font-black flex items-center gap-3">
+                            Start Today — It&apos;s Free <ArrowRight className="size-5" />
+                        </HoverBorderGradient>
                     </a>
                     <p className="text-xs text-neutral-600 mt-5">30-minute call. Zero commitment. Actual value.</p>
                 </motion.div>

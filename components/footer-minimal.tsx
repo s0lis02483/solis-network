@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function FooterMinimal() {
     return (
@@ -47,11 +48,10 @@ export function FooterMinimal() {
                                 </li>
                             ))}
                         </ul>
-                        <a
-                            href="#contact"
-                            className="inline-block mt-5 px-5 py-2.5 rounded-full bg-yellow-400 text-neutral-900 font-bold text-xs hover:bg-yellow-300 transition-colors duration-200"
-                        >
-                            Book a Free Call →
+                        <a href="#contact" className="inline-block mt-5">
+                            <HoverBorderGradient yellow className="px-5 py-2.5 text-xs">
+                                Book a Free Call →
+                            </HoverBorderGradient>
                         </a>
                     </div>
                 </div>

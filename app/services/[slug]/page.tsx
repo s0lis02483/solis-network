@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { FooterMinimal } from "@/components/footer-minimal";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { getService, services } from "@/lib/services-data";
 
 export function generateStaticParams() {
@@ -148,23 +149,21 @@ export default async function ServicePage({
               </p>
             </div>
             <div className="shrink-0 flex flex-col gap-3">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-colors duration-200"
-              >
-                Get in touch <ArrowRight className="size-4" />
+              <Link href="/#contact">
+                <HoverBorderGradient yellow className="px-7 py-3.5 text-sm flex items-center gap-2">
+                  Get in touch <ArrowRight className="size-4" />
+                </HoverBorderGradient>
               </Link>
-              <Link
-                href="/#services"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-neutral-700 text-neutral-300 font-semibold text-sm hover:border-neutral-500 hover:text-white transition-colors duration-200"
-              >
-                View all services
+              <Link href="/#services">
+                <HoverBorderGradient className="px-7 py-3.5 text-sm">
+                  View all services
+                </HoverBorderGradient>
               </Link>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
+      <FooterMinimal />
     </>
   );
 }

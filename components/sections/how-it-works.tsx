@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Search, Rocket } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const steps = [
     {
@@ -98,11 +99,10 @@ export function HowItWorksSection() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center mt-12"
                 >
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-yellow-400 text-neutral-900 font-bold text-sm hover:bg-yellow-300 transition-colors duration-200"
-                    >
-                        Book Your Free Call Now
+                    <a href="#contact">
+                        <HoverBorderGradient yellow className="px-8 py-3.5 text-sm">
+                            Book Your Free Call Now
+                        </HoverBorderGradient>
                     </a>
                 </motion.div>
             </div>
