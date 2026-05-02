@@ -16,6 +16,7 @@ const navLinks = [
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [lang, setLang] = useState<"EN" | "SL">("EN");
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -55,13 +56,31 @@ export function Navbar() {
                     ))}
                 </ul>
 
-                {/* CTA */}
+                {/* CTA + Language switcher */}
                 <div className="hidden md:flex items-center gap-3">
                     <a href="#contact">
                         <HoverBorderGradient className="px-5 py-2 text-sm">
                             Get in touch
                         </HoverBorderGradient>
                     </a>
+
+                    {/* Language toggle */}
+                    <div className="flex items-center gap-0.5 bg-neutral-800/60 border border-neutral-700/60 rounded-full p-0.5">
+                        {(["EN", "SL"] as const).map((l) => (
+                            <button
+                                key={l}
+                                onClick={() => setLang(l)}
+                                className={cn(
+                                    "px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200",
+                                    lang === l
+                                        ? "bg-yellow-400 text-neutral-900"
+                                        : "text-neutral-400 hover:text-white"
+                                )}
+                            >
+                                {l}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Mobile toggle */}
@@ -95,14 +114,30 @@ export function Navbar() {
                                     </a>
                                 </li>
                             ))}
-                            <li>
+                            <li className="flex items-center justify-between">
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileOpen(false)}
-                                    className="block w-full text-center rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-semibold py-2.5 text-sm"
+                                    className="block rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-semibold py-2.5 px-6 text-sm"
                                 >
                                     Get in touch
                                 </a>
+                                <div className="flex items-center gap-0.5 bg-neutral-800/60 border border-neutral-700/60 rounded-full p-0.5">
+                                    {(["EN", "SL"] as const).map((l) => (
+                                        <button
+                                            key={l}
+                                            onClick={() => setLang(l)}
+                                            className={cn(
+                                                "px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200",
+                                                lang === l
+                                                    ? "bg-yellow-400 text-neutral-900"
+                                                    : "text-neutral-400 hover:text-white"
+                                            )}
+                                        >
+                                            {l}
+                                        </button>
+                                    ))}
+                                </div>
                             </li>
                         </ul>
                     </motion.div>
