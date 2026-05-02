@@ -1,12 +1,22 @@
+"use client";
+
 import { Mail, Phone, MapPin } from "lucide-react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { useLanguage } from "@/contexts/language-context";
+
+const serviceNames = {
+  EN: ["AI Chatbots", "AI Automations", "Voice Assistants", "Web Development", "Digital Marketing", "Team Systems"],
+  SL: ["AI Klepetalnice", "AI Avtomatizacije", "Glasovni Asistenti", "Spletni Razvoj", "Digitalni Marketing", "Timski Sistemi"],
+};
 
 export function FooterMinimal() {
+    const { t, lang } = useLanguage();
+    const f = t.footer;
+
     return (
         <footer className="bg-neutral-950 border-t border-neutral-800 py-12">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                    {/* Brand */}
                     <div>
                         <div className="flex items-center gap-2 mb-3">
                             <img src="/logo.svg" alt="Solis Network logo" width={30} height={30} />
@@ -14,32 +24,26 @@ export function FooterMinimal() {
                                 Solis<span className="text-yellow-400">.</span>
                             </span>
                         </div>
-                        <p className="text-xs text-neutral-500 leading-relaxed max-w-[220px]">
-                            AI-powered solutions that automate your business and drive real growth.
-                        </p>
+                        <p className="text-xs text-neutral-500 leading-relaxed max-w-[220px]">{f.tagline}</p>
                     </div>
 
-                    {/* Links */}
                     <div>
-                        <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Services</p>
+                        <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">{f.servicesTitle}</p>
                         <ul className="flex flex-col gap-2">
-                            {["AI Chatbots", "AI Automations", "Voice Assistants", "Web Development", "Digital Marketing", "Team Systems"].map((s) => (
+                            {serviceNames[lang].map((s) => (
                                 <li key={s}>
-                                    <a href="#services" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors duration-200">
-                                        {s}
-                                    </a>
+                                    <a href="#services" className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors duration-200">{s}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div>
                         <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-4">Contact</p>
                         <ul className="flex flex-col gap-3">
                             {[
-                                { icon: Mail, label: "info@solis-network.com" },
-                                { icon: Phone, label: "+386 69 976 180" },
+                                { icon: Mail,   label: "info@solis-network.com" },
+                                { icon: Phone,  label: "+386 69 976 180" },
                                 { icon: MapPin, label: "Ljubljana, Slovenia" },
                             ].map(({ icon: Icon, label }) => (
                                 <li key={label} className="flex items-center gap-2">
@@ -50,7 +54,7 @@ export function FooterMinimal() {
                         </ul>
                         <a href="#contact" className="inline-block mt-5">
                             <HoverBorderGradient yellow className="px-5 py-2.5 text-xs">
-                                Book a Free Call →
+                                {f.bookBtn}
                             </HoverBorderGradient>
                         </a>
                     </div>
@@ -59,9 +63,7 @@ export function FooterMinimal() {
                 <div className="h-px bg-neutral-800 mb-6" />
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-                    <p className="text-xs text-neutral-600">
-                        © {new Date().getFullYear()} Solis Network Agency. All rights reserved.
-                    </p>
+                    <p className="text-xs text-neutral-600">© {new Date().getFullYear()} Solis Network Agency. All rights reserved.</p>
                     <div className="flex gap-5 text-xs text-neutral-600">
                         <a href="#" className="hover:text-neutral-400 transition-colors">Privacy</a>
                         <a href="#" className="hover:text-neutral-400 transition-colors">Terms</a>

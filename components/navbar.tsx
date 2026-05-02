@@ -6,23 +6,44 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { cn } from "@/lib/utils";
-
-const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Testimonials", href: "#testimonials" },
-];
+import { useLanguage } from "@/contexts/language-context";
+import { type Lang } from "@/lib/i18n";
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [lang, setLang] = useState<"EN" | "SL">("EN");
+    const { lang, setLang, t } = useLanguage();
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    const navLinks = [
+        { label: t.nav.services,     href: "#services" },
+        { label: t.nav.about,        href: "#about" },
+        { label: t.nav.testimonials, href: "#testimonials" },
+    ];
+
+    const LangToggle = () => (
+        <div className="flex items-center gap-0.5 bg-neutral-800/60 border border-neutral-700/60 rounded-full p-0.5">
+            {(["EN", "SL"] as Lang[]).map((l) => (
+                <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    className={cn(
+                        "px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200",
+                        lang === l
+                            ? "bg-yellow-400 text-neutral-900"
+                            : "text-neutral-400 hover:text-white"
+                    )}
+                >
+                    {l}
+                </button>
+            ))}
+        </div>
+    );
 
     return (
         <header
@@ -56,31 +77,14 @@ export function Navbar() {
                     ))}
                 </ul>
 
-                {/* CTA + Language switcher */}
+                {/* CTA + Language */}
                 <div className="hidden md:flex items-center gap-3">
                     <a href="#contact">
                         <HoverBorderGradient className="px-5 py-2 text-sm">
-                            Get in touch
+                            {t.nav.cta}
                         </HoverBorderGradient>
                     </a>
-
-                    {/* Language toggle */}
-                    <div className="flex items-center gap-0.5 bg-neutral-800/60 border border-neutral-700/60 rounded-full p-0.5">
-                        {(["EN", "SL"] as const).map((l) => (
-                            <button
-                                key={l}
-                                onClick={() => setLang(l)}
-                                className={cn(
-                                    "px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200",
-                                    lang === l
-                                        ? "bg-yellow-400 text-neutral-900"
-                                        : "text-neutral-400 hover:text-white"
-                                )}
-                            >
-                                {l}
-                            </button>
-                        ))}
-                    </div>
+                    <LangToggle />
                 </div>
 
                 {/* Mobile toggle */}
@@ -114,30 +118,13 @@ export function Navbar() {
                                     </a>
                                 </li>
                             ))}
-                            <li className="flex items-center justify-between">
-                                <a
-                                    href="#contact"
-                                    onClick={() => setMobileOpen(false)}
-                                    className="block rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-semibold py-2.5 px-6 text-sm"
-                                >
-                                    Get in touch
+                            <li className="flex items-center justify-between gap-4">
+                                <a href="#contact" onClick={() => setMobileOpen(false)}>
+                                    <HoverBorderGradient className="px-5 py-2 text-sm">
+                                        {t.nav.cta}
+                                    </HoverBorderGradient>
                                 </a>
-                                <div className="flex items-center gap-0.5 bg-neutral-800/60 border border-neutral-700/60 rounded-full p-0.5">
-                                    {(["EN", "SL"] as const).map((l) => (
-                                        <button
-                                            key={l}
-                                            onClick={() => setLang(l)}
-                                            className={cn(
-                                                "px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200",
-                                                lang === l
-                                                    ? "bg-yellow-400 text-neutral-900"
-                                                    : "text-neutral-400 hover:text-white"
-                                            )}
-                                        >
-                                            {l}
-                                        </button>
-                                    ))}
-                                </div>
+                                <LangToggle />
                             </li>
                         </ul>
                     </motion.div>

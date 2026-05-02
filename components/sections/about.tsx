@@ -3,20 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-
-const values = [
-    "Clear, transparent communication at every stage",
-    "Results designed to deliver long-term impact, not short-term wins",
-    "Senior-level experts leading every project from start to finish",
-    "Agile workflows with weekly check-ins to keep everything aligned and on track",
-];
+import { useLanguage } from "@/contexts/language-context";
 
 export function AboutSection() {
+    const { t } = useLanguage();
+    const a = t.about;
+
     return (
         <section id="about" className="py-24 bg-neutral-50 dark:bg-neutral-900 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    {/* Image side */}
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +31,6 @@ export function AboutSection() {
                         </div>
                     </motion.div>
 
-                    {/* Text side */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -43,23 +38,19 @@ export function AboutSection() {
                         transition={{ duration: 0.7 }}
                     >
                         <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
-                            About Us
+                            {a.tag}
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight mb-6">
-                            A network agency built on{" "}
+                            {a.title}{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
-                                trust and results
+                                {a.titleAccent}
                             </span>
                         </h2>
-                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-5">
-                            Solis Network is a full-service digital agency operating at the forefront of innovation. We collaborate with startups, scale-ups, and established brands to design and execute digital strategies that drive real, measurable growth — not just impressions.
-                        </p>
-                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
-                            Our team of experienced strategists, designers, and engineers brings deep, cross-functional expertise to every project. Every decision is deliberate, every detail refined, and every solution built with performance in mind.
-                        </p>
+                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-5">{a.p1}</p>
+                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">{a.p2}</p>
 
                         <ul className="flex flex-col gap-3 mb-10">
-                            {values.map((v) => (
+                            {a.values.map((v) => (
                                 <li key={v} className="flex items-start gap-3">
                                     <CheckCircle className="size-5 text-yellow-400 shrink-0 mt-0.5" />
                                     <span className="text-neutral-700 dark:text-neutral-300 text-sm">{v}</span>
@@ -68,7 +59,7 @@ export function AboutSection() {
                         </ul>
 
                         <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed italic border-l-2 border-yellow-400/50 pl-4">
-                            We don&apos;t just deliver projects — we build partnerships that move your business forward.
+                            {a.closing}
                         </p>
                     </motion.div>
                 </div>

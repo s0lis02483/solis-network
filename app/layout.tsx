@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/language-context";
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -22,7 +23,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${roboto.variable} h-full antialiased dark`}>
             <body className="min-h-full flex flex-col font-[family-name:var(--font-roboto)]">
-                {children}
+                <LanguageProvider>{children}</LanguageProvider>
             </body>
         </html>
     );

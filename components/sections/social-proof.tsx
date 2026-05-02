@@ -1,23 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/language-context";
 
-const metrics = [
-    { value: "300+", label: "Hours saved per month", desc: "across all clients" },
-    { value: "40%", label: "Average increase in leads", desc: "within 90 days" },
-    { value: "85%", label: "Faster response time", desc: "with AI support" },
-    { value: "50+", label: "Businesses automated", desc: "and growing" },
-];
-
-const logos = [
-    "TechFlow", "NovaCorp", "SwiftBuild", "PeakRetail", "UrbanScale", "DataDrive",
-];
+const logos = ["TechFlow", "NovaCorp", "SwiftBuild", "PeakRetail", "UrbanScale", "DataDrive"];
 
 export function SocialProofSection() {
+    const { t } = useLanguage();
+    const p = t.proof;
+
     return (
         <section className="py-20 bg-neutral-900 border-y border-neutral-800">
             <div className="container mx-auto px-4 md:px-6">
-                {/* Logos */}
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -26,26 +20,21 @@ export function SocialProofSection() {
                     className="text-center mb-14"
                 >
                     <p className="text-xs font-semibold text-neutral-500 tracking-widest uppercase mb-8">
-                        Trusted by businesses across Europe
+                        {p.trusted}
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
                         {logos.map((logo) => (
-                            <span
-                                key={logo}
-                                className="text-lg font-bold text-neutral-600 tracking-tight hover:text-neutral-400 transition-colors duration-200"
-                            >
+                            <span key={logo} className="text-lg font-bold text-neutral-600 tracking-tight hover:text-neutral-400 transition-colors duration-200">
                                 {logo}
                             </span>
                         ))}
                     </div>
                 </motion.div>
 
-                {/* Divider */}
                 <div className="h-px bg-neutral-800 mb-14" />
 
-                {/* Metrics */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                    {metrics.map((m, i) => (
+                    {p.metrics.map((m, i) => (
                         <motion.div
                             key={m.label}
                             initial={{ opacity: 0, y: 20 }}

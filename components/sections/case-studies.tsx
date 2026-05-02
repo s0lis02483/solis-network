@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Bot, Cpu, Globe, Mic, Megaphone, Layers } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 const cases = [
     {
@@ -85,6 +86,9 @@ const cases = [
 ];
 
 export function CaseStudiesSection() {
+    const { t } = useLanguage();
+    const cs = t.cases;
+
     return (
         <section id="case-studies" className="py-24 bg-neutral-950">
             <div className="container mx-auto px-4 md:px-6">
@@ -96,17 +100,15 @@ export function CaseStudiesSection() {
                     className="text-center mb-16"
                 >
                     <span className="inline-block text-sm font-semibold text-yellow-400 tracking-widest uppercase mb-3">
-                        Case Studies
+                        {cs.tag}
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
-                        Real businesses.{" "}
+                        {cs.title}{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
-                            Real results.
+                            {cs.titleAccent}
                         </span>
                     </h2>
-                    <p className="text-lg text-neutral-400 max-w-xl mx-auto">
-                        Here&apos;s what happens when businesses stop doing things manually and let AI work for them.
-                    </p>
+                    <p className="text-lg text-neutral-400 max-w-xl mx-auto">{cs.sub}</p>
                 </motion.div>
 
                 <div className="flex flex-col gap-8">
@@ -137,11 +139,11 @@ export function CaseStudiesSection() {
 
                                         <div className="flex flex-col gap-5">
                                             <div>
-                                                <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">Problem</p>
+                                                <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">{cs.problemLabel}</p>
                                                 <p className="text-sm text-neutral-400 leading-relaxed">{c.problem}</p>
                                             </div>
                                             <div>
-                                                <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">Solution</p>
+                                                <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">{cs.solutionLabel}</p>
                                                 <p className="text-sm text-neutral-400 leading-relaxed">{c.solution}</p>
                                             </div>
                                         </div>
@@ -149,7 +151,7 @@ export function CaseStudiesSection() {
 
                                     {/* Right — results */}
                                     <div className="p-8 md:p-10 flex flex-col justify-center">
-                                        <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-8">Results</p>
+                                        <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-8">{cs.resultsLabel}</p>
                                         <div className="flex flex-col gap-6">
                                             {c.results.map((r) => (
                                                 <div key={r.label} className="flex items-center gap-6">
