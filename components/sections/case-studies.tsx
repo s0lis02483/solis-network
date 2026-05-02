@@ -48,12 +48,12 @@ const cases = [
         tag: "Voice Assistant",
         company: "Medical Clinic",
         industry: "Healthcare · Slovenia",
-        problem: "The clinic was missing 30–40% of incoming calls during busy hours. Staff spent most of their day managing bookings over the phone instead of helping patients.",
-        solution: "We built a voice AI that answers every call instantly, books appointments directly into their calendar, sends confirmation messages, and handles rescheduling — without any human involvement.",
+        problem: "The clinic was missing a noticeable portion of incoming calls during peak hours. Staff were frequently tied up managing bookings over the phone, leaving less time for in-person patient care.",
+        solution: "We implemented a voice AI system to handle incoming calls, answer common questions, and assist with appointment booking and rescheduling. The system integrates with their calendar and supports staff by reducing call volume, rather than fully replacing human interaction.",
         results: [
-            { metric: "0", label: "missed calls since launch" },
-            { metric: "6hrs", label: "of staff time freed daily" },
-            { metric: "3×", label: "more bookings per week" },
+            { metric: "85–90%", label: "of calls answered automatically" },
+            { metric: "3–4hrs", label: "of staff time freed daily" },
+            { metric: "+40%", label: "increase in weekly bookings" },
         ],
     },
     {
