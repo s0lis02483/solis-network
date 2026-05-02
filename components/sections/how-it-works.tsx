@@ -57,8 +57,6 @@ export function HowItWorksSection() {
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-                    {/* Connecting line (desktop) */}
-                    <div className="hidden md:block absolute top-14 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-px bg-gradient-to-r from-neutral-700 via-yellow-400/30 to-neutral-700" />
 
                     {steps.map((step, i) => {
                         const Icon = step.icon;
@@ -91,20 +89,6 @@ export function HowItWorksSection() {
                     })}
                 </div>
 
-                {/* CTA below */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-center mt-12"
-                >
-                    <a href="#contact">
-                        <HoverBorderGradient yellow className="px-8 py-3.5 text-sm">
-                            Book Your Free Call Now
-                        </HoverBorderGradient>
-                    </a>
-                </motion.div>
             </div>
         </section>
     );
